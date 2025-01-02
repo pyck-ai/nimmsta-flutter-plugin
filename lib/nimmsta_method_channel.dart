@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'nimmsta_event.dart';
 import 'nimmsta_platform_interface.dart';
 
+/// The implementation of the platform-specific functionalities for the Nimmsta SDK
 class MethodChannelNimmsta extends NimmstaPlatform {
   static const MethodChannel _methodChannel = MethodChannel('nimmsta/methods');
 
@@ -31,10 +32,9 @@ class MethodChannelNimmsta extends NimmstaPlatform {
   }
 
   @override
-  Future<void> setLayout(String layout,
-      Map<String, String> data) async {
-    return await _methodChannel.invokeMethod(
-        "setLayout", {"layout": layout, "data": data});
+  Future<void> setLayout(String layout, Map<String, String> data) async {
+    return await _methodChannel
+        .invokeMethod("setLayout", {"layout": layout, "data": data});
   }
 
   @override
@@ -45,18 +45,16 @@ class MethodChannelNimmsta extends NimmstaPlatform {
 
   @override
   Future<void> setLEDColor(Color color) async {
-    return await _methodChannel.invokeMethod(
-        "setLEDColor",
-        {
-          "r": (color.r * 255).floor(),
-          "g": (color.g * 255).floor(),
-          "b": (color.b * 255).floor()
-        });
+    return await _methodChannel.invokeMethod("setLEDColor", {
+      "r": (color.r * 255).floor(),
+      "g": (color.g * 255).floor(),
+      "b": (color.b * 255).floor()
+    });
   }
 
   @override
-  Future<void> triggerLEDBurst(int repeat, int duration, int pulseDuration,
-      Color color) async {
+  Future<void> triggerLEDBurst(
+      int repeat, int duration, int pulseDuration, Color color) async {
     return await _methodChannel.invokeMethod("triggerLEDBurst", {
       "repeat": repeat,
       "duration": duration,
@@ -68,8 +66,8 @@ class MethodChannelNimmsta extends NimmstaPlatform {
   }
 
   @override
-  Future<void> triggerVibrationBurst(int repeat, int duration,
-      int pulseDuration, int intensity) async {
+  Future<void> triggerVibrationBurst(
+      int repeat, int duration, int pulseDuration, int intensity) async {
     return await _methodChannel.invokeMethod("triggerVibrationBurst", {
       "repeat": repeat,
       "duration": duration,
@@ -79,8 +77,8 @@ class MethodChannelNimmsta extends NimmstaPlatform {
   }
 
   @override
-  Future<void> triggerBeeperBurst(int repeat, int duration, int pulseDuration,
-      int intensity) async {
+  Future<void> triggerBeeperBurst(
+      int repeat, int duration, int pulseDuration, int intensity) async {
     return await _methodChannel.invokeMethod("triggerBeeperBurst", {
       "repeat": repeat,
       "duration": duration,

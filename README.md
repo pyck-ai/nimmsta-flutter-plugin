@@ -64,10 +64,10 @@ class _MyAppState extends State<MyApp> {
         .getCallbackStream()
         .listen((NimmstaEvent event) {
       switch (event.type) {
-        case NimmstaEventType.DID_SCAN_BARCODE:
+        case NimmstaEventType.didScanBarcode:
           print("Event: Did scan barcode: ${event.data?["barcode"]}");
           break;
-        case NimmstaEventType.DID_CONNECT_AND_INIT:
+        case NimmstaEventType.didConnectAndInit:
           print("Event: Did connect and init");
         default:
           break;
@@ -111,7 +111,7 @@ nimmsta.password=[your password]
 Within `android/app/build.gradle` you have to add the following in the `android` section:
 ```groovy
 android {
-    ...
+    //...
     packagingOptions {
         exclude 'META-INF/*.kotlin_module'
         exclude 'META-INF/DEPENDENCIES'

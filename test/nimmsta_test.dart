@@ -21,7 +21,7 @@ class MockNimmstaPlatform
 
   @override
   Stream<NimmstaEvent> getCallbackStream() => Stream.value(NimmstaEvent(
-      NimmstaEventType.DID_SCAN_BARCODE, {"barcode": "6939801713458"}));
+      NimmstaEventType.didScanBarcode, {"barcode": "6939801713458"}));
 
   @override
   Future<void> reconnect(String address) async {}
