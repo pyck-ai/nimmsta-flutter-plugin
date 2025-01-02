@@ -11,6 +11,23 @@ website for further reference: https://docs.nimmsta.com/core/android/6.0/
 |-------------|---------|
 | **Support** | SDK 26+ |
 
+## Features Supported
+
+See the example app for detailed implementation information.
+
+| Features                    | Android |
+|-----------------------------|---------|
+| **Scan**                    | ✅       |
+| **Button Click**            | ✅       |
+| **Touch**                   | ✅       |
+| **Battery Level Change**    | ✅       |
+| **Set Layout**              | ✅       |
+| **Set Screen Info**         | ✅       |
+| **Set LED Color**           | ✅       |
+| **Trigger LED Burst**       | ✅       |
+| **Trigger Vibration Burst** | ✅       |
+| **Trigger Beeper Burst**    | ✅       |
+
 ## Example
 
 <?code-excerpt "lib/basic.dart (basic-example)"?>
@@ -77,7 +94,7 @@ class _MyAppState extends State<MyApp> {
 
 ```
 
-See the example app for more complex examples.
+See the example app for more detailed implementation.
 
 ## Configuration
 
