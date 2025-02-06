@@ -64,10 +64,10 @@ class _MyAppState extends State<MyApp> {
         .getCallbackStream()
         .listen((NimmstaEvent event) {
       switch (event.type) {
-        case NimmstaEventType.didScanBarcode:
+        case NimmstaEventType.DID_SCAN_BARCODE:
           print("Event: Did scan barcode: ${event.data?["barcode"]}");
           break;
-        case NimmstaEventType.didConnectAndInit:
+        case NimmstaEventType.DID_CONNECT_AND_INIT:
           print("Event: Did connect and init");
         default:
           break;

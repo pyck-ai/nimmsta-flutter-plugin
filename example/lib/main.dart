@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
           break;
 
         case NimmstaEventType.DID_RECONNECT_AND_INIT:
-          debugPrint("Event: Did reconect and init");
+          debugPrint("Event: Did reconnect and init");
 
           setState(() {
             isConnected = true;
