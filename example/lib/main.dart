@@ -45,19 +45,19 @@ class _MyAppState extends State<MyApp> {
         .getCallbackStream()
         .listen((NimmstaEvent event) {
       switch (event.type) {
-        case NimmstaEventType.didScanBarcode:
+        case NimmstaEventType.DID_SCAN_BARCODE:
           debugPrint("Event: Did scan barcode: ${event.data?["barcode"]}");
           break;
 
-        case NimmstaEventType.batteryLevelChanged:
+        case NimmstaEventType.BATTERY_LEVEL_CHANGED:
           debugPrint("Event: Battery level changed");
           break;
 
-        case NimmstaEventType.didClickButton:
+        case NimmstaEventType.DID_CLICK_BUTTON:
           debugPrint("Event: Did click button}");
           break;
 
-        case NimmstaEventType.didDisconnect:
+        case NimmstaEventType.DID_DISCONNECT:
           debugPrint("Event: Did diconnect");
 
           setState(() {
@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
 
           break;
 
-        case NimmstaEventType.didConnectAndInit:
+        case NimmstaEventType.DID_CONNECT_AND_INIT:
           debugPrint("Event: Did connect and init");
 
           setState(() {
@@ -77,7 +77,7 @@ class _MyAppState extends State<MyApp> {
 
           break;
 
-        case NimmstaEventType.didReconnectAndInit:
+        case NimmstaEventType.DID_RECONNECT_AND_INIT:
           debugPrint("Event: Did reconect and init");
 
           setState(() {
@@ -87,11 +87,11 @@ class _MyAppState extends State<MyApp> {
 
           break;
 
-        case NimmstaEventType.didReceiveEvent:
+        case NimmstaEventType.DID_RECEIVE_EVENT:
           debugPrint("Event: Did receive event");
           break;
 
-        case NimmstaEventType.didTouch:
+        case NimmstaEventType.DID_TOUCH:
           debugPrint(
               "Event: Did touch x: ${event.data?["x"]} y: ${event.data?["y"]}");
           break;

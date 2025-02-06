@@ -76,7 +76,7 @@ android {
 }
 
 dependencies {
-    api("com.nimmsta.core:shared-android:7.0.7654") {
+    api("com.nimmsta.core:shared-android:7.0.7825") {
         transitive = true
         changing = true
 

@@ -1,6 +1,6 @@
 name: nimmsta
 description: "A Flutter plugin for the Android NIMMSTA Core Library based on https://docs.nimmsta.com"
-version: 1.0.1
+version: 1.0.2
 homepage: https://pyck.ai
 repository: https://github.com/pyck-ai/nimmsta-flutter-plugin
 
